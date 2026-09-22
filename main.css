@@ -81,6 +81,28 @@ header {
     scale: 0.95;
 }
 
+.action-btn-1 {
+  background-color: orange;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+}
+
+.action-btn-1:hover {
+    scale: 1.05;
+    color: #fff;
+}
+
+.action-btn-1:active {
+    scale: 0.95;
+}
+
 .dropdown_menu {
     display: none;
     position: absolute;
@@ -106,10 +128,25 @@ header {
     justify-content: center;
 }
 
-.dropdown_menu .action-btn {
+.dropdown_menu .action-btn-1 {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+section#hero {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+#hero h1 {
+    font-style: 3rem;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 992px) {
@@ -125,4 +162,11 @@ header {
   .dropdown_menu {
     display: block;
   }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
 }
